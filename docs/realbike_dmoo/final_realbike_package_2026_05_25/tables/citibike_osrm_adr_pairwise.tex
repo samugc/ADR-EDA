@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\scriptsize
+\caption{Comparación pareada de ADR-EDA frente a referencias Citi Bike OSRM}
+\label{tab:realbike-citibike-pairwise}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllll}
+\hline
+Comparación & Delta utilidad & Delta servicio & Delta km & Delta reopt\\
+\hline
+ADR-EDA frente a estática 2/día & 467.3 & 0.0160 & 189.9 & 175.6 \\
+ADR-EDA frente a reeq. horario & 30.2 & -0.0028 & -1880.1 & -137.4 \\
+ADR-EDA frente a horizonte rodante & -46.2 & -0.0050 & -1785.5 & -137.4 \\
+ADR-EDA frente a EDA horaria & -99.9 & -0.0049 & -582.0 & -137.4 \\
+\hline
+\end{tabular}
+}
+\end{table}

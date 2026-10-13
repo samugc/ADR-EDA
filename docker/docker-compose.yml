@@ -1,0 +1,10 @@
+services:
+  benchmark:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.benchmark
+    platform: linux/amd64
+    working_dir: /app
+    volumes:
+      - ..:/app
+    command: tail -f /dev/null

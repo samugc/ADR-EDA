@@ -1,0 +1,26 @@
+% Auto-generated RealBike table; labels adapted for thesis readability.
+\begin{table}[ht]
+\centering
+\caption{Resultados RealBike con horizonte de 336 horas, EDAspy/SPEDA, OSRM y predicción histórica actualizada durante la ejecución}
+\label{tab:realbike-multiciudad}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llrrrrrrrr}
+\toprule
+Sistema & Política & Utilidad & Servicio & Rech& Km & Bicis & Reopt& Reutil& Decisión (s) \\
+\midrule
+Divvy & Reeq. horario & 1754.04 & 0.8948 & 340.0 & 4289.9 & 739.0 & 336.0 & 0.0 & 0.01 \\
+Divvy & Horizonte rodante & 1784.56 & 0.9000 & 323.0 & 4701.7 & 846.0 & 336.0 & 0.0 & 0.08 \\
+Divvy & EDA horaria & 1927.69 & 0.8980 & 329.7 & 2082.0 & 611.0 & 336.0 & 0.0 & 231.23 \\
+Divvy & ADR-EDA & 1896.50 & 0.8960 & 336.0 & 2238.8 & 604.4 & 183.1 & 152.9 & 124.35 \\
+Divvy & ADR-EDA (utilidad) & 1876.96 & 0.8922 & 348.3 & 1846.6 & 604.9 & 182.3 & 153.7 & 33.96 \\
+\addlinespace
+Citi Bike & Reeq. horario & 8578.75 & 0.9966 & 31.0 & 4351.9 & 2141.0 & 336.0 & 0.0 & 0.03 \\
+Citi Bike & Horizonte rodante & 8591.56 & 0.9971 & 26.0 & 4407.4 & 2175.0 & 336.0 & 0.0 & 0.12 \\
+Citi Bike & EDA horaria & 8618.22 & 0.9956 & 39.5 & 3449.0 & 1764.8 & 336.0 & 0.0 & 324.09 \\
+Citi Bike & ADR-EDA & 8609.63 & 0.9956 & 39.7 & 3569.6 & 1781.1 & 146.1 & 189.9 & 132.44 \\
+Citi Bike & ADR-EDA (utilidad) & 8588.44 & 0.9946 & 48.8 & 3387.4 & 1787.9 & 157.7 & 178.3 & 28.05 \\
+\addlinespace
+\bottomrule
+\end{tabular}
+}
+\end{table}

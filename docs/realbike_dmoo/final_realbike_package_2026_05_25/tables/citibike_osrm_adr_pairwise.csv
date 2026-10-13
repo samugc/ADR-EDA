@@ -1,0 +1,5 @@
+comparison,utility_delta,utility_wins,service_delta,km_delta,km_saved,reoptimization_delta,reopt_saved
+ADR-EDA frente a estática 2/día,467.274,10,0.015962,189.899,-189.899,175.6,-175.6
+ADR-EDA frente a reeq. horario,30.171,7,-0.002836,-1880.056,1880.056,-137.4,137.4
+ADR-EDA frente a horizonte rodante,-46.213,1,-0.005034,-1785.52,1785.52,-137.4,137.4
+ADR-EDA frente a EDA horaria,-99.924,1,-0.004903,-582.005,582.005,-137.4,137.4

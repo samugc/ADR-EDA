@@ -1,0 +1,4 @@
+comparison,n,delta_profit_eur,delta_service_pp,delta_rejected,delta_km_improductivo,delta_reopt,profit_wins,service_nonworse,km_improductivo_wins
+ADR-EDA frente a estática completa,6,503.55457277397767,-0.30141669341277233,1.6666666666666667,-136.23323333333335,-91.0,6,3,6
+ADR-EDA frente a evento rápido,6,75.20434565333592,0.08975432409340697,-0.5,-15.920316666666663,-1.5,4,4,3
+ADR-EDA frente a estática completa (mecanismo),6,301.6806776885733,-0.26903601979090064,1.5,-127.50321666666666,-90.5,6,3,6

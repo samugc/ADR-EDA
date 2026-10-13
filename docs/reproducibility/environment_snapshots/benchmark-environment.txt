@@ -1,0 +1,8 @@
+ADR-EDA benchmark environment
+
+Base EDAspy commit: 04e45cfb9f797cc735dd0f5b265ac03c496100d4
+Platform: linux/amd64
+
+Python 3.10.19
+x86_64
+pip 26.0.1 from /usr/local/lib/python3.10/site-packages/pip (python 3.10)

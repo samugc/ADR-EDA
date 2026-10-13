@@ -1,0 +1,9 @@
+policy,label,utility,service_rate,relocation_km,reoptimizations,reuse_epochs,rejected
+no_relocation,sin reequilibrado,4766.8,0.863999,0.0,0.0,0.0,1237.2
+static_twice_daily_rebalance,estática 2/día,8115.32,0.974277,2037.527,23.0,0.0,234.0
+full_rebalance,reeq. horario,8552.423,0.993075,4107.482,336.0,0.0,63.0
+rolling_horizon_rebalance,horizonte rodante,8628.807,0.995273,4012.947,336.0,0.0,43.0
+selective_rebalance,selectiva,8591.294,0.98948,2040.262,152.0,0.0,95.7
+adr_safe_reuse_proxy,ADR aproximado,8435.264,0.984303,1903.801,87.5,61.9,142.8
+eda_hourly_no_reuse,EDA horaria,8682.518,0.995141,2809.431,336.0,0.0,44.2
+adr_eda_station,ADR-EDA,8582.594,0.990239,2227.426,198.6,26.1,88.8

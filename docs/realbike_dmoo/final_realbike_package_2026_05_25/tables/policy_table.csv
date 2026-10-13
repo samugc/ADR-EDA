@@ -1,0 +1,6 @@
+policy,short_name,reoptimizes,reuses,uses_eda,role
+static_twice_daily_rebalance,estática 2/día,03:00 y 15:00,no,no,referencia periódica inspirada en reequilibrado estático
+full_rebalance,reeq. horario,cada hora,no,no,referencia determinista que recalcula en todos los periodos
+rolling_horizon_rebalance,horizonte rodante,cada hora,no,no,referencia operativa con predicción de corto plazo
+eda_hourly_no_reuse,EDA horaria,cada hora,no,sí,referencia intensiva con EDA sin ADR
+adr_eda_station,ADR-EDA,adaptativo,sí,sí,política propuesta

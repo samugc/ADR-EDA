@@ -1,0 +1,999 @@
+{
+  "config": {
+    "selected_algorithms": [
+      "adr_eda",
+      "sgea",
+      "trnsga2"
+    ],
+    "selected_problems": [
+      "dzdt1_step",
+      "dzdt3_shocks",
+      "df4_t10"
+    ],
+    "seeds": 2,
+    "horizon": 20,
+    "size_gen": 20,
+    "n_variables": 20,
+    "generations_per_step": 1
+  },
+  "algorithm_metadata": {
+    "adr_eda": {
+      "name": "adr_eda",
+      "runner": "speda",
+      "description": "ADR-EDA v2.1 frozen benchmark-side profile with predictive, continuity and diversity blocks plus contextual front-LS gating.",
+      "implementation_kind": "framework_wrapper",
+      "faithfulness": "frozen_profile",
+      "change_protocol": "internal_adr_detector_frozen_profile",
+      "implementation_source": "in_repo",
+      "author_code_path": "",
+      "author_code_abs_path": "",
+      "author_code_status": "not_applicable",
+      "author_code_available": false
+    },
+    "sgea": {
+      "name": "sgea",
+      "runner": "sgea_module",
+      "description": "Jiang-Yang 2017 SGEA with author-code-audited environment selection, steady-state update and centroid-guided change response.",
+      "implementation_kind": "author_code_audited_python_port",
+      "faithfulness": "author_code_core_port_unified_protocol",
+      "change_protocol": "paper_detection_reevaluate_fraction",
+      "implementation_source": "author_code_audited_port",
+      "author_code_path": "third_party/author_code/extracted/SGEA",
+      "author_code_abs_path": "/app/third_party/author_code/extracted/SGEA",
+      "author_code_status": "author_provided_c_visual_studio_code_extracted_not_directly_executed",
+      "author_code_available": true
+    },
+    "trnsga2": {
+      "name": "trnsga2",
+      "runner": "trnsga2_module",
+      "description": "Jiang et al. (2018) Tr-NSGA-II with change-triggered Tr-IPG/TCA, optimized preimage and NSGA-II refinement.",
+      "implementation_kind": "dedicated_module",
+      "faithfulness": "paper_faithful_core_optimization_preimage",
+      "change_protocol": "oracle_change_notification",
+      "implementation_source": "in_repo",
+      "author_code_path": "",
+      "author_code_abs_path": "",
+      "author_code_status": "not_applicable",
+      "author_code_available": false
+    }
+  },
+  "summary": {
+    "adr_eda": {
+      "n_ok": 6,
+      "migd": {
+        "mean": 3.626187518570905,
+        "std": 3.562268076954152,
+        "median": 1.3646089539324622
+      },
+      "mhv": {
+        "mean": 2.936312926204483,
+        "std": 2.101034958500783,
+        "median": 3.563070490618559
+      },
+      "final_igd": {
+        "mean": 1.3408490925892578,
+        "std": 1.1871561242902537,
+        "median": 0.7487577077903615
+      },
+      "final_hv": {
+        "mean": 4.684530578329954,
+        "std": 2.70215127828252,
+        "median": 5.841028099206293
+      },
+      "post_change_igd": {
+        "mean": 1.939943938986988,
+        "std": 1.784332035734549,
+        "median": 0.9333228501480278
+      },
+      "post_change_hv": {
+        "mean": 3.9957585707332837,
+        "std": 2.7172597299201686,
+        "median": 5.131769761264238
+      },
+      "recovery_time": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "precision": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "recall": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "f1": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "runtime_sec": {
+        "mean": 11.224240130333328,
+        "std": 6.942398090655964,
+        "median": 9.889253025500238
+      },
+      "n_detected": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "env_changes": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "local_search_calls": {
+        "mean": 20.0,
+        "std": 0.0,
+        "median": 20.0
+      },
+      "memory_hits": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "memory_archive_size": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "adr_meta_enabled": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "adr_meta_updates": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "adr_meta_reuses": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "adr_meta_reuse_ratio": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "adr_meta_drift_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_quality_reverted_count": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_predictive_samples": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_continuity_samples": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_diversity_samples": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_front_ls_samples": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_adr_weight_count": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_adr_predictive_weight_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_adr_continuity_weight_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_adr_diversity_weight_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_adr_front_ls_weight_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "inherited_state_reliability_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_gate_reject_ratio_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_switch_cost_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_front_improvement_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_required_improvement_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_switching_gate_rejected_count": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_continuity_diverse_count": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_ready_count": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_front_shift_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_pos_shift_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_overlap_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_shape_change_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_coherence_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_pos_change_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_pof_change_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_negative_transfer_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_coherent_motion_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_global_change_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_pof_stability_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_tau_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_continuity_risk_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_continuity_removed_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "reaction_geometry_transfer_predictive_share_mean": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      }
+    },
+    "sgea": {
+      "n_ok": 6,
+      "migd": {
+        "mean": 5.08681095804958,
+        "std": 5.492912296370347,
+        "median": 1.51491473573496
+      },
+      "mhv": {
+        "mean": 2.5342929523496394,
+        "std": 1.9292778167839606,
+        "median": 2.758757734139474
+      },
+      "final_igd": {
+        "mean": 2.2604708856963303,
+        "std": 2.658376955408481,
+        "median": 1.0610719016073205
+      },
+      "final_hv": {
+        "mean": 4.0346502337135,
+        "std": 2.571341823179407,
+        "median": 4.615732626021892
+      },
+      "post_change_igd": {
+        "mean": 2.81183840823311,
+        "std": 3.24539727300653,
+        "median": 1.1329757584429534
+      },
+      "post_change_hv": {
+        "mean": 3.5166993066527366,
+        "std": 2.4809468575360145,
+        "median": 4.354380516756827
+      },
+      "recovery_time": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "precision": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0
+      },
+      "recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0
+      },
+      "f1": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0
+      },
+      "runtime_sec": {
+        "mean": 1.694707521833455,
+        "std": 1.600988974679951,
+        "median": 0.8060200840000107
+      },
+      "n_detected": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0
+      },
+      "env_changes": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0
+      },
+      "local_search_calls": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "memory_hits": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "memory_archive_size": {
+        "mean": 18.833333333333332,
+        "std": 1.2133516482134197,
+        "median": 19.0
+      },
+      "adr_meta_enabled": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "adr_meta_updates": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "adr_meta_reuses": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "adr_meta_reuse_ratio": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "adr_meta_drift_mean": {
+        "mean": 0.1290479935082702,
+        "std": 0.07702721387754928,
+        "median": 0.1311794870390729
+      },
+      "reaction_quality_reverted_count": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_predictive_samples": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_continuity_samples": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_diversity_samples": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_front_ls_samples": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_adr_weight_count": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_adr_predictive_weight_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_adr_continuity_weight_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_adr_diversity_weight_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_adr_front_ls_weight_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "inherited_state_reliability_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_gate_reject_ratio_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_switch_cost_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_front_improvement_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_required_improvement_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_switching_gate_rejected_count": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_continuity_diverse_count": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_ready_count": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_front_shift_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_pos_shift_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_overlap_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_shape_change_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_coherence_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_pos_change_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_pof_change_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_negative_transfer_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_coherent_motion_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_global_change_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_pof_stability_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_tau_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_continuity_risk_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_continuity_removed_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_transfer_predictive_share_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      }
+    },
+    "trnsga2": {
+      "n_ok": 6,
+      "migd": {
+        "mean": 6.306843180888827,
+        "std": 6.918761496057875,
+        "median": 1.704154918549757
+      },
+      "mhv": {
+        "mean": 2.3556245615793086,
+        "std": 1.8382588768693362,
+        "median": 2.2113207468449456
+      },
+      "final_igd": {
+        "mean": 1.8839166055276213,
+        "std": 1.9658897186609299,
+        "median": 1.1744641682124226
+      },
+      "final_hv": {
+        "mean": 4.1998155803408475,
+        "std": 2.357650699501178,
+        "median": 4.30172784580273
+      },
+      "post_change_igd": {
+        "mean": 3.3776727951567564,
+        "std": 3.493589274453149,
+        "median": 1.411582373419167
+      },
+      "post_change_hv": {
+        "mean": 3.3117707424483247,
+        "std": 2.31589282396843,
+        "median": 3.5152591530956885
+      },
+      "recovery_time": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "precision": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0
+      },
+      "recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0
+      },
+      "f1": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0
+      },
+      "runtime_sec": {
+        "mean": 6.190481002833167,
+        "std": 2.2553377802832357,
+        "median": 6.847629648999373
+      },
+      "n_detected": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0
+      },
+      "env_changes": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0
+      },
+      "local_search_calls": {
+        "mean": 10.5,
+        "std": 1.3844373104863459,
+        "median": 10.5
+      },
+      "memory_hits": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0
+      },
+      "memory_archive_size": {
+        "mean": 12.0,
+        "std": 4.725815626252608,
+        "median": 12.5
+      },
+      "adr_meta_enabled": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "adr_meta_updates": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "adr_meta_reuses": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "adr_meta_reuse_ratio": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "adr_meta_drift_mean": {
+        "mean": 0.12744220005664256,
+        "std": 0.07865114016846685,
+        "median": 0.12428302870961745
+      },
+      "reaction_quality_reverted_count": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_predictive_samples": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_continuity_samples": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_diversity_samples": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_front_ls_samples": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_adr_weight_count": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_adr_predictive_weight_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_adr_continuity_weight_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_adr_diversity_weight_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_adr_front_ls_weight_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "inherited_state_reliability_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_gate_reject_ratio_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_switch_cost_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_front_improvement_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_required_improvement_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_switching_gate_rejected_count": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_continuity_diverse_count": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_ready_count": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_front_shift_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_pos_shift_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_overlap_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_shape_change_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_coherence_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_pos_change_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_pof_change_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_negative_transfer_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_coherent_motion_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_global_change_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_pof_stability_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_tau_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_continuity_risk_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_continuity_removed_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_transfer_predictive_share_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      }
+    }
+  },
+  "pairwise_vs_adr_eda": {
+    "sgea": {
+      "n_paired": 6,
+      "migd": {
+        "delta_mean": -1.4606234394786748,
+        "improvement_mean": -1.4606234394786748,
+        "pvalue": 0.953125,
+        "p_reference_better": 0.078125,
+        "p_variant_better": 0.953125,
+        "wins": 1,
+        "ties": 0,
+        "losses": 5,
+        "n_used": 6
+      },
+      "mhv": {
+        "delta_mean": 0.40201997385484317,
+        "improvement_mean": -0.40201997385484317,
+        "pvalue": 0.78125,
+        "p_reference_better": 0.28125,
+        "p_variant_better": 0.78125,
+        "wins": 2,
+        "ties": 0,
+        "losses": 4,
+        "n_used": 6
+      },
+      "post_change_igd": {
+        "delta_mean": -0.871894469246122,
+        "improvement_mean": -0.871894469246122,
+        "pvalue": 0.78125,
+        "p_reference_better": 0.28125,
+        "p_variant_better": 0.78125,
+        "wins": 2,
+        "ties": 0,
+        "losses": 4,
+        "n_used": 6
+      },
+      "post_change_hv": {
+        "delta_mean": 0.47905926408054694,
+        "improvement_mean": -0.47905926408054694,
+        "pvalue": 0.890625,
+        "p_reference_better": 0.15625,
+        "p_variant_better": 0.890625,
+        "wins": 2,
+        "ties": 0,
+        "losses": 4,
+        "n_used": 6
+      },
+      "recovery_time": {
+        "delta_mean": 0.0,
+        "improvement_mean": 0.0,
+        "pvalue": 1.0,
+        "p_reference_better": 1.0,
+        "p_variant_better": 1.0,
+        "wins": 0,
+        "ties": 6,
+        "losses": 0,
+        "n_used": 6
+      }
+    },
+    "trnsga2": {
+      "n_paired": 6,
+      "migd": {
+        "delta_mean": -2.680655662317923,
+        "improvement_mean": -2.680655662317923,
+        "pvalue": 0.953125,
+        "p_reference_better": 0.078125,
+        "p_variant_better": 0.953125,
+        "wins": 1,
+        "ties": 0,
+        "losses": 5,
+        "n_used": 6
+      },
+      "mhv": {
+        "delta_mean": 0.5806883646251745,
+        "improvement_mean": -0.5806883646251745,
+        "pvalue": 0.84375,
+        "p_reference_better": 0.21875,
+        "p_variant_better": 0.84375,
+        "wins": 2,
+        "ties": 1,
+        "losses": 3,
+        "n_used": 6
+      },
+      "post_change_igd": {
+        "delta_mean": -1.4377288561697685,
+        "improvement_mean": -1.4377288561697685,
+        "pvalue": 0.96875,
+        "p_reference_better": 0.046875,
+        "p_variant_better": 0.96875,
+        "wins": 1,
+        "ties": 0,
+        "losses": 5,
+        "n_used": 6
+      },
+      "post_change_hv": {
+        "delta_mean": 0.6839878282849593,
+        "improvement_mean": -0.6839878282849593,
+        "pvalue": 0.84375,
+        "p_reference_better": 0.21875,
+        "p_variant_better": 0.84375,
+        "wins": 2,
+        "ties": 1,
+        "losses": 3,
+        "n_used": 6
+      },
+      "recovery_time": {
+        "delta_mean": 0.0,
+        "improvement_mean": 0.0,
+        "pvalue": 1.0,
+        "p_reference_better": 1.0,
+        "p_variant_better": 1.0,
+        "wins": 0,
+        "ties": 6,
+        "losses": 0,
+        "n_used": 6
+      }
+    }
+  }
+}

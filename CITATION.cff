@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "ADR-EDA"
+message: "Please cite this software and the associated thesis or CAEPIA 2026 paper where appropriate; final proceedings identifiers are pending."
+type: software
+authors:
+  - family-names: "García Carballo"
+    given-names: "Jesús Samuel"
+repository-code: "https://github.com/samugc/ADR-EDA"
+abstract: "Adaptive Dynamic Response Estimation of Distribution Algorithm: adaptive control over a persistent multiobjective EDA for dynamic optimization. Associated research includes the CAEPIA 2026 paper ADR-EDA: A reliability-aware controller for dynamic multiobjective estimation of distribution algorithms."
+keywords:
+  - dynamic multiobjective optimization
+  - estimation of distribution algorithms
+  - adaptive response
+  - shared mobility
+references:
+  - type: thesis
+    title: "ADR-EDA: una arquitectura adaptativa de estimación de distribuciones para optimización multiobjetivo dinámica con aplicaciones en movilidad compartida"
+    authors:
+      - family-names: "García Carballo"
+        given-names: "Jesús Samuel"
+    year: 2026

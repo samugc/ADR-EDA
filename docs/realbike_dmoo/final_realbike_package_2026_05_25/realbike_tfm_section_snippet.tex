@@ -1,0 +1,22 @@
+\section{Validacion RealBike con datos reales y OSRM}
+\label{sec:realbike-final}
+
+RealBike se plantea como una validacion externa de ADR-EDA sobre datos reales de bike-sharing station-based. A diferencia de los benchmarks sinteticos, aqui las estaciones, coordenadas y viajes proceden de Citi Bike y Divvy. La decision optimizada por ADR-EDA es un vector de inventario objetivo por estacion; la rutina de recolocacion traduce ese vector en movimientos de bicicletas, y la demanda observada actualiza el estado del sistema.
+
+La motivacion es operacional: reoptimizar cada hora puede mejorar el servicio, pero tambien incrementa los kilometros de recolocacion y el coste computacional. ADR-EDA introduce una puerta adaptativa que decide cuando actualizar la distribucion aprendida y cuando reutilizar la solucion heredada.
+
+\input{../docs/realbike_dmoo/final_realbike_package_2026_05_25/tables/policy_table.tex}
+
+\input{../docs/realbike_dmoo/final_realbike_package_2026_05_25/tables/citibike_osrm_main_results.tex}
+
+En la campana Citi Bike con matriz OSRM, ADR-EDA supera claramente al baseline estatico dos veces al dia y se aproxima a las politicas dinamicas agresivas. Frente a rolling horizon reduce kilometros y reoptimizaciones, aunque con una ligera perdida de servicio. Frente a EDA horaria sin reutilizacion, ADR-EDA mantiene un nivel de servicio alto con menos actualizaciones, lo que justifica la puerta adaptativa.
+
+\input{../docs/realbike_dmoo/final_realbike_package_2026_05_25/tables/citibike_osrm_adr_pairwise.tex}
+
+Adicionalmente, siguiendo la literatura reciente sobre reequilibrado dinamico, se ejecuta una validacion cronologica evento-a-evento. Esta evaluacion evita depender exclusivamente de demanda agregada por hora: cada alquiler y devolucion se aplica en su instante observado, mientras que la politica sigue decidiendo en fronteras horarias.
+
+\input{../docs/realbike_dmoo/final_realbike_package_2026_05_25/tables/event_replay_multicity_results.tex}
+
+Los resultados evento-a-evento muestran que ADR-EDA no colapsa al pasar a una simulacion mas fina. En Citi Bike, con gate agresivo, iguala el servicio de rolling horizon y reduce kilometros. En Divvy, el mismo gate mejora la utilidad frente a rolling horizon y tambien reduce kilometros. El gate mas reutilizador reduce aproximadamente a la mitad las reoptimizaciones, a costa de una perdida moderada, lo que ofrece una palanca interpretable para ajustar la politica al coste operativo.
+
+La conclusion defendible es que ADR-EDA funciona como politica coste-consciente para reequilibrado dinamico station-based: aprende distribuciones de inventario objetivo y decide cuando actualizarlas o reutilizarlas. Este bloque no pretende reproducir todos los detalles industriales de una empresa de bike-sharing, pero si aporta una validacion realista, reproducible y alineada con literatura mediante datos reales, distancias OSRM, baselines operativos y replay cronologico de eventos.

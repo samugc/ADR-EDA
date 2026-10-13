@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+\centering
+\scriptsize
+\caption{Políticas comparadas en RealBike}
+\label{tab:realbike-politicas}
+\begin{tabularx}{\textwidth}{
+    >{\raggedright\arraybackslash}p{2.7cm}
+    >{\raggedright\arraybackslash}p{2.3cm}
+    >{\centering\arraybackslash}p{1.5cm}
+    >{\centering\arraybackslash}p{1.3cm}
+    >{\raggedright\arraybackslash}X
+}
+\toprule
+Política & Reoptimiza & Reutiliza & Usa EDA & Rol \\
+\midrule
+Estática 2/día & 03:00 y 15:00 & no & no & Referencia periódica inspirada en reequilibrado estático\\
+Reequilibrado horario & cada hora & no & no & Referencia determinista que recalcula un objetivo en todos los periodos\\
+Horizonte rodante & cada hora & no & no & Referencia operativa que usa una predicción de demanda de corto plazo\\
+EDA horaria & cada hora & no & sí & Referencia intensiva con EDA sin reutilización adaptativa\\
+ADR-EDA & adaptativo & sí & sí & Política propuesta: actualiza o reutiliza según las señales del dominio\\
+\bottomrule
+\end{tabularx}
+\end{table}

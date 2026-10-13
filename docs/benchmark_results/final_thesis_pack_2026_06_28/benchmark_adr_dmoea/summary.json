@@ -1,0 +1,323 @@
+{
+  "config": {
+    "selected_algorithms": [
+      "adr_dmoea"
+    ],
+    "selected_problems": [
+      "dzdt1_step",
+      "dzdt1_sine",
+      "dzdt2_shape",
+      "dzdt3_shocks",
+      "fda1_lite",
+      "fda2_lite",
+      "dconstrained_zdt1",
+      "ddtlz2_3obj",
+      "df1_t10",
+      "df2_t10",
+      "df3_t10",
+      "df4_t10",
+      "df5_t10",
+      "df6_t10"
+    ],
+    "seeds": 15,
+    "horizon": 60,
+    "size_gen": 40,
+    "n_variables": 8,
+    "generations_per_step": 1
+  },
+  "algorithm_metadata": {
+    "adr_dmoea": {
+      "name": "adr_dmoea",
+      "runner": "adr_dmoea_module",
+      "description": "Wang et al. 2026 ADR-DMOEA with subpopulation-level ADRM, static-optimization-distance feedback and MOEA/D-DE refinement.",
+      "implementation_kind": "dedicated_module",
+      "faithfulness": "paper_core_adaptive_dynamic_response_candidate",
+      "change_protocol": "oracle_change_notification_plus_adaptive_response",
+      "implementation_source": "in_repo",
+      "author_code_path": "",
+      "author_code_abs_path": "",
+      "author_code_status": "not_applicable",
+      "author_code_available": false
+    }
+  },
+  "summary": {
+    "adr_dmoea": {
+      "n_ok": 210,
+      "migd": {
+        "mean": 1.0066490007226918,
+        "std": 1.7711294901728036,
+        "median": 0.5348580200589698
+      },
+      "mhv": {
+        "mean": 4.11124531890564,
+        "std": 2.821433195237458,
+        "median": 5.147806503606645
+      },
+      "final_igd": {
+        "mean": 0.2197327804868141,
+        "std": 0.17859720995489484,
+        "median": 0.15928240317449305
+      },
+      "final_hv": {
+        "mean": 5.364575314321218,
+        "std": 3.6790251215435354,
+        "median": 6.565880229143074
+      },
+      "post_change_igd": {
+        "mean": 1.39154505209505,
+        "std": 2.6273640739151904,
+        "median": 0.4794900308947422
+      },
+      "post_change_hv": {
+        "mean": 3.514751726587261,
+        "std": 3.5825592903797236,
+        "median": 1.3699289224231928
+      },
+      "recovery_time": {
+        "mean": 5.851111111111111,
+        "std": 3.0810740471385327,
+        "median": 6.0
+      },
+      "precision": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0
+      },
+      "recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0
+      },
+      "f1": {
+        "mean": 1.0,
+        "std": 0.0,
+        "median": 1.0
+      },
+      "runtime_sec": {
+        "mean": 1.688161975176185,
+        "std": 2.603448940064022,
+        "median": 0.6914780630004316
+      },
+      "n_detected": {
+        "mean": 2.5714285714285716,
+        "std": 2.3211538298959886,
+        "median": 3.0
+      },
+      "env_changes": {
+        "mean": 2.5714285714285716,
+        "std": 2.3211538298959886,
+        "median": 3.0
+      },
+      "local_search_calls": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "memory_hits": {
+        "mean": 0.0,
+        "std": 0.0,
+        "median": 0.0
+      },
+      "memory_archive_size": {
+        "mean": 2.0,
+        "std": 1.8516401995451028,
+        "median": 2.0
+      },
+      "adr_meta_enabled": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "adr_meta_updates": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "adr_meta_reuses": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "adr_meta_reuse_ratio": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "adr_meta_drift_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_quality_reverted_count": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_predictive_samples": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_continuity_samples": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_diversity_samples": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_front_ls_samples": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_adr_weight_count": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_adr_predictive_weight_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_adr_continuity_weight_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_adr_diversity_weight_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_adr_front_ls_weight_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "inherited_state_reliability_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_gate_reject_ratio_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_switch_cost_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_front_improvement_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_required_improvement_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_switching_gate_rejected_count": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_continuity_diverse_count": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_ready_count": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_front_shift_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_pos_shift_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_overlap_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_shape_change_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_coherence_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_pos_change_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_pof_change_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_negative_transfer_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_coherent_motion_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_global_change_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_pof_stability_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_tau_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_continuity_risk_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_continuity_removed_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      },
+      "reaction_geometry_transfer_predictive_share_mean": {
+        "mean": NaN,
+        "std": NaN,
+        "median": NaN
+      }
+    }
+  },
+  "pairwise_vs_adr_eda": {
+    "adr_dmoea": {
+      "n_paired": 0
+    }
+  }
+}

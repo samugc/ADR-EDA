@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering
+\scriptsize
+\caption{Resultados principales Citi Bike con matriz OSRM, 336 horas y 10 semillas}
+\label{tab:realbike-citibike-osrm}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllllll}
+\hline
+Política & Utilidad & Servicio & Km & Reopt& Reutil& Rechazos \\
+\hline
+sin reequilibrado & 4766.8 & 0.8640 & 0.0 & 0.0 & 0.0 & 1237.2 \\
+estática 2/día & 8115.3 & 0.9743 & 2037.5 & 23.0 & 0.0 & 234.0 \\
+reeq. horario & 8552.4 & 0.9931 & 4107.5 & 336.0 & 0.0 & 63.0 \\
+horizonte rodante & 8628.8 & 0.9953 & 4012.9 & 336.0 & 0.0 & 43.0 \\
+selectiva & 8591.3 & 0.9895 & 2040.3 & 152.0 & 0.0 & 95.7 \\
+ADR aproximado & 8435.3 & 0.9843 & 1903.8 & 87.5 & 61.9 & 142.8 \\
+EDA horaria & 8682.5 & 0.9951 & 2809.4 & 336.0 & 0.0 & 44.2 \\
+ADR-EDA & 8582.6 & 0.9902 & 2227.4 & 198.6 & 26.1 & 88.8 \\
+\hline
+\end{tabular}
+}
+\end{table}

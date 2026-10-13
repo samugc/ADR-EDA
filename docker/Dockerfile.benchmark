@@ -1,0 +1,56 @@
+FROM python:3.10.19-slim-bookworm
+
+ENV PYTHONUNBUFFERED=1
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    wget \
+    unzip \
+    libgomp1 \
+    opencl-headers \
+    ocl-icd-opencl-dev \
+    pocl-opencl-icd \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /opt
+
+COPY docker/benchmark-runtime.txt /tmp/benchmark-runtime.txt
+
+RUN python -m pip install --upgrade "pip==26.0.1" \
+    && grep -v '^pgmpy==' /tmp/benchmark-runtime.txt > /tmp/runtime-no-pgmpy.txt \
+    && python -m pip install -r /tmp/runtime-no-pgmpy.txt \
+    && python -m pip install --no-deps --index-url https://download.pytorch.org/whl/cpu "torch==2.10.0" \
+    && python -m pip install --no-deps "pgmpy==0.1.21"
+
+ARG EDASPY_REPOSITORY=https://github.com/VicentePerezSoloviev/EDAspy.git
+ARG EDASPY_COMMIT=04e45cfb9f797cc735dd0f5b265ac03c496100d4
+
+RUN git clone "${EDASPY_REPOSITORY}" /opt/EDAspy \
+    && cd /opt/EDAspy \
+    && git checkout "${EDASPY_COMMIT}"
+
+COPY external/edaspy_extension/adr_eda_edaspy.patch /tmp/adr_eda_edaspy.patch
+
+RUN cd /opt/EDAspy \
+    && git apply --check /tmp/adr_eda_edaspy.patch \
+    && git apply /tmp/adr_eda_edaspy.patch \
+    && python -m pip install --no-deps -e .
+
+ENV PYTHONPATH=/opt/EDAspy:/app/src
+
+WORKDIR /app
+
+RUN python - <<'PY'
+from EDAspy.optimization.eda_dynamic import DynamicEDA
+from EDAspy.optimization.multivariate.dynamic_speda import DynamicSPEDA
+from EDAspy.optimization.custom.probabilistic_models import SPBN
+
+print("ADR-EDA benchmark backend OK")
+print("DynamicEDA:", DynamicEDA.__name__)
+print("DynamicSPEDA:", DynamicSPEDA.__name__)
+print("SPBN:", SPBN.__name__)
+PY
+
+CMD ["bash"]

@@ -1,0 +1,499 @@
+{
+  "source": "osrm:https://router.project-osrm.org",
+  "profile": "driving",
+  "distance_km": {
+    "Centro": {
+      "Centro": 0.0,
+      "Salamanca": 3.3959,
+      "Chamartin": 8.355799999999999,
+      "Tetuan": 6.853899999999999,
+      "Retiro": 4.0552,
+      "Arganzuela": 3.8029,
+      "Moncloa": 4.3772,
+      "Latina": 6.0105,
+      "Carabanchel": 6.2642,
+      "Usera": 5.8723,
+      "Vallecas": 11.537799999999999,
+      "Airport": 22.3386
+    },
+    "Salamanca": {
+      "Centro": 3.4134,
+      "Salamanca": 0.0,
+      "Chamartin": 5.916600000000001,
+      "Tetuan": 5.0701,
+      "Retiro": 2.9112,
+      "Arganzuela": 5.1162,
+      "Moncloa": 6.434399999999999,
+      "Latina": 8.1785,
+      "Carabanchel": 7.5776,
+      "Usera": 10.1273,
+      "Vallecas": 9.9297,
+      "Airport": 18.486099999999997
+    },
+    "Chamartin": {
+      "Centro": 8.0448,
+      "Salamanca": 6.3665,
+      "Chamartin": 0.0,
+      "Tetuan": 3.6478,
+      "Retiro": 10.5969,
+      "Arganzuela": 15.5283,
+      "Moncloa": 8.6031,
+      "Latina": 12.156799999999999,
+      "Carabanchel": 17.0578,
+      "Usera": 15.1966,
+      "Vallecas": 15.6226,
+      "Airport": 17.6115
+    },
+    "Tetuan": {
+      "Centro": 6.2237,
+      "Salamanca": 4.8075,
+      "Chamartin": 3.3568000000000002,
+      "Tetuan": 0.0,
+      "Retiro": 7.144,
+      "Arganzuela": 7.8937,
+      "Moncloa": 5.5746,
+      "Latina": 9.128200000000001,
+      "Carabanchel": 9.694600000000001,
+      "Usera": 14.474,
+      "Vallecas": 14.9001,
+      "Airport": 19.578200000000002
+    },
+    "Retiro": {
+      "Centro": 3.5431,
+      "Salamanca": 2.3049,
+      "Chamartin": 9.884,
+      "Tetuan": 7.0352,
+      "Retiro": 0.0,
+      "Arganzuela": 3.4421999999999997,
+      "Moncloa": 7.1515,
+      "Latina": 7.6228,
+      "Carabanchel": 6.105300000000001,
+      "Usera": 5.5054,
+      "Vallecas": 7.8142,
+      "Airport": 19.8368
+    },
+    "Arganzuela": {
+      "Centro": 3.6939,
+      "Salamanca": 4.991,
+      "Chamartin": 13.6531,
+      "Tetuan": 8.443,
+      "Retiro": 3.7453000000000003,
+      "Arganzuela": 0.0,
+      "Moncloa": 7.3475,
+      "Latina": 5.5952,
+      "Carabanchel": 3.3733,
+      "Usera": 2.3098,
+      "Vallecas": 9.772,
+      "Airport": 24.2215
+    },
+    "Moncloa": {
+      "Centro": 5.42,
+      "Salamanca": 6.408,
+      "Chamartin": 10.1561,
+      "Tetuan": 5.386100000000001,
+      "Retiro": 7.717899999999999,
+      "Arganzuela": 6.996899999999999,
+      "Moncloa": 0.0,
+      "Latina": 7.3342,
+      "Carabanchel": 9.3262,
+      "Usera": 10.8106,
+      "Vallecas": 15.199200000000001,
+      "Airport": 29.964599999999997
+    },
+    "Latina": {
+      "Centro": 5.6274,
+      "Salamanca": 7.6103000000000005,
+      "Chamartin": 12.010299999999999,
+      "Tetuan": 8.8143,
+      "Retiro": 7.6796999999999995,
+      "Arganzuela": 5.1017,
+      "Moncloa": 6.059399999999999,
+      "Latina": 0.0,
+      "Carabanchel": 4.795,
+      "Usera": 6.6388,
+      "Vallecas": 14.5281,
+      "Airport": 29.809900000000003
+    },
+    "Carabanchel": {
+      "Centro": 6.823300000000001,
+      "Salamanca": 7.8972,
+      "Chamartin": 16.731,
+      "Tetuan": 10.2008,
+      "Retiro": 6.7732,
+      "Arganzuela": 3.3859,
+      "Moncloa": 8.3407,
+      "Latina": 4.2648,
+      "Carabanchel": 0.0,
+      "Usera": 3.0264,
+      "Vallecas": 14.1008,
+      "Airport": 27.299400000000002
+    },
+    "Usera": {
+      "Centro": 5.528,
+      "Salamanca": 9.4776,
+      "Chamartin": 13.9645,
+      "Tetuan": 14.7947,
+      "Retiro": 8.198799999999999,
+      "Arganzuela": 2.5405,
+      "Moncloa": 9.494200000000001,
+      "Latina": 5.900399999999999,
+      "Carabanchel": 2.6992,
+      "Usera": 0.0,
+      "Vallecas": 9.251100000000001,
+      "Airport": 24.533
+    },
+    "Vallecas": {
+      "Centro": 12.2363,
+      "Salamanca": 10.751100000000001,
+      "Chamartin": 15.000399999999999,
+      "Tetuan": 15.8306,
+      "Retiro": 8.5375,
+      "Arganzuela": 11.6904,
+      "Moncloa": 18.391,
+      "Latina": 16.9035,
+      "Carabanchel": 13.702200000000001,
+      "Usera": 10.682,
+      "Vallecas": 0.0,
+      "Airport": 19.3813
+    },
+    "Airport": {
+      "Centro": 24.586599999999997,
+      "Salamanca": 19.491,
+      "Chamartin": 17.3657,
+      "Tetuan": 19.7742,
+      "Retiro": 22.9991,
+      "Arganzuela": 28.1707,
+      "Moncloa": 29.4097,
+      "Latina": 33.428,
+      "Carabanchel": 28.3883,
+      "Usera": 27.838900000000002,
+      "Vallecas": 22.2365,
+      "Airport": 0.0
+    }
+  },
+  "duration_min": {
+    "Centro": {
+      "Centro": 0.0,
+      "Salamanca": 7.263333333333334,
+      "Chamartin": 15.421666666666665,
+      "Tetuan": 13.504999999999999,
+      "Retiro": 8.568333333333333,
+      "Arganzuela": 8.298333333333334,
+      "Moncloa": 10.421666666666665,
+      "Latina": 12.043333333333333,
+      "Carabanchel": 12.838333333333333,
+      "Usera": 12.354999999999999,
+      "Vallecas": 16.711666666666666,
+      "Airport": 34.68333333333333
+    },
+    "Salamanca": {
+      "Centro": 7.241666666666666,
+      "Salamanca": 0.0,
+      "Chamartin": 9.566666666666666,
+      "Tetuan": 9.139999999999999,
+      "Retiro": 5.363333333333333,
+      "Arganzuela": 9.053333333333335,
+      "Moncloa": 11.493333333333334,
+      "Latina": 14.275,
+      "Carabanchel": 13.593333333333334,
+      "Usera": 13.026666666666667,
+      "Vallecas": 13.125,
+      "Airport": 28.834999999999997
+    },
+    "Chamartin": {
+      "Centro": 14.718333333333334,
+      "Salamanca": 10.088333333333333,
+      "Chamartin": 0.0,
+      "Tetuan": 6.5633333333333335,
+      "Retiro": 13.231666666666666,
+      "Arganzuela": 16.558333333333334,
+      "Moncloa": 14.771666666666667,
+      "Latina": 19.658333333333335,
+      "Carabanchel": 20.305,
+      "Usera": 17.926666666666666,
+      "Vallecas": 18.026666666666664,
+      "Airport": 26.376666666666665
+    },
+    "Tetuan": {
+      "Centro": 11.846666666666666,
+      "Salamanca": 7.941666666666666,
+      "Chamartin": 6.033333333333333,
+      "Tetuan": 0.0,
+      "Retiro": 12.323333333333332,
+      "Arganzuela": 13.786666666666667,
+      "Moncloa": 10.728333333333333,
+      "Latina": 15.615,
+      "Carabanchel": 17.408333333333335,
+      "Usera": 17.255,
+      "Vallecas": 17.355,
+      "Airport": 29.673333333333336
+    },
+    "Retiro": {
+      "Centro": 7.77,
+      "Salamanca": 3.9433333333333334,
+      "Chamartin": 12.295,
+      "Tetuan": 12.576666666666666,
+      "Retiro": 0.0,
+      "Arganzuela": 6.418333333333334,
+      "Moncloa": 14.215,
+      "Latina": 12.629999999999999,
+      "Carabanchel": 10.778333333333334,
+      "Usera": 9.471666666666666,
+      "Vallecas": 10.228333333333333,
+      "Airport": 30.188333333333333
+    },
+    "Arganzuela": {
+      "Centro": 8.806666666666667,
+      "Salamanca": 9.35,
+      "Chamartin": 16.208333333333332,
+      "Tetuan": 15.603333333333333,
+      "Retiro": 7.775,
+      "Arganzuela": 0.0,
+      "Moncloa": 11.76,
+      "Latina": 9.583333333333334,
+      "Carabanchel": 7.0183333333333335,
+      "Usera": 4.678333333333333,
+      "Vallecas": 13.641666666666667,
+      "Airport": 35.266666666666666
+    },
+    "Moncloa": {
+      "Centro": 13.756666666666666,
+      "Salamanca": 12.258333333333333,
+      "Chamartin": 16.616666666666667,
+      "Tetuan": 12.253333333333334,
+      "Retiro": 15.011666666666667,
+      "Arganzuela": 12.725,
+      "Moncloa": 0.0,
+      "Latina": 11.766666666666667,
+      "Carabanchel": 13.705,
+      "Usera": 15.896666666666667,
+      "Vallecas": 23.441666666666666,
+      "Airport": 36.38166666666667
+    },
+    "Latina": {
+      "Centro": 12.004999999999999,
+      "Salamanca": 12.866666666666667,
+      "Chamartin": 19.93,
+      "Tetuan": 15.623333333333333,
+      "Retiro": 13.028333333333334,
+      "Arganzuela": 8.44,
+      "Moncloa": 9.153333333333334,
+      "Latina": 0.0,
+      "Carabanchel": 7.75,
+      "Usera": 10.360000000000001,
+      "Vallecas": 18.426666666666666,
+      "Airport": 39.18666666666666
+    },
+    "Carabanchel": {
+      "Centro": 14.143333333333334,
+      "Salamanca": 13.67,
+      "Chamartin": 17.881666666666668,
+      "Tetuan": 18.946666666666665,
+      "Retiro": 12.305,
+      "Arganzuela": 6.113333333333333,
+      "Moncloa": 13.305,
+      "Latina": 7.3149999999999995,
+      "Carabanchel": 0.0,
+      "Usera": 6.486666666666666,
+      "Vallecas": 15.703333333333335,
+      "Airport": 36.940000000000005
+    },
+    "Usera": {
+      "Centro": 12.308333333333334,
+      "Salamanca": 11.75,
+      "Chamartin": 14.548333333333334,
+      "Tetuan": 17.313333333333333,
+      "Retiro": 10.333333333333334,
+      "Arganzuela": 5.056666666666667,
+      "Moncloa": 14.620000000000001,
+      "Latina": 10.148333333333333,
+      "Carabanchel": 5.765,
+      "Usera": 0.0,
+      "Vallecas": 12.846666666666666,
+      "Airport": 33.60666666666667
+    },
+    "Vallecas": {
+      "Centro": 17.261666666666667,
+      "Salamanca": 13.54,
+      "Chamartin": 16.561666666666667,
+      "Tetuan": 19.326666666666664,
+      "Retiro": 11.621666666666666,
+      "Arganzuela": 13.629999999999999,
+      "Moncloa": 22.148333333333333,
+      "Latina": 20.14,
+      "Carabanchel": 15.756666666666666,
+      "Usera": 14.235000000000001,
+      "Vallecas": 0.0,
+      "Airport": 29.084999999999997
+    },
+    "Airport": {
+      "Centro": 34.17666666666666,
+      "Salamanca": 29.1,
+      "Chamartin": 24.721666666666668,
+      "Tetuan": 28.803333333333335,
+      "Retiro": 30.384999999999998,
+      "Arganzuela": 34.02,
+      "Moncloa": 34.93833333333334,
+      "Latina": 39.516666666666666,
+      "Carabanchel": 37.845,
+      "Usera": 35.388333333333335,
+      "Vallecas": 29.401666666666664,
+      "Airport": 0.0
+    }
+  },
+  "zones": {
+    "Centro": {
+      "lat": 40.4168,
+      "lon": -3.7038
+    },
+    "Salamanca": {
+      "lat": 40.4302,
+      "lon": -3.6774
+    },
+    "Chamartin": {
+      "lat": 40.4726,
+      "lon": -3.6822
+    },
+    "Tetuan": {
+      "lat": 40.46,
+      "lon": -3.6976
+    },
+    "Retiro": {
+      "lat": 40.4114,
+      "lon": -3.6761
+    },
+    "Arganzuela": {
+      "lat": 40.3988,
+      "lon": -3.6994
+    },
+    "Moncloa": {
+      "lat": 40.4359,
+      "lon": -3.7194
+    },
+    "Latina": {
+      "lat": 40.4078,
+      "lon": -3.7415
+    },
+    "Carabanchel": {
+      "lat": 40.3906,
+      "lon": -3.7242
+    },
+    "Usera": {
+      "lat": 40.384,
+      "lon": -3.7002
+    },
+    "Vallecas": {
+      "lat": 40.3815,
+      "lon": -3.6215
+    },
+    "Airport": {
+      "lat": 40.4983,
+      "lon": -3.5676
+    }
+  },
+  "congestion_time_bands": [
+    {
+      "name": "overnight",
+      "hours": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "multipliers": {
+        "all": 0.82
+      }
+    },
+    {
+      "name": "morning_peak",
+      "hours": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "multipliers": {
+        "all": 1.0615
+      }
+    },
+    {
+      "name": "midday",
+      "hours": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "multipliers": {
+        "all": 1.1358
+      }
+    },
+    {
+      "name": "evening_peak",
+      "hours": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "multipliers": {
+        "all": 1.148
+      }
+    },
+    {
+      "name": "night",
+      "hours": [
+        21,
+        22,
+        23
+      ],
+      "multipliers": {
+        "all": 0.9244
+      }
+    }
+  ],
+  "congestion_profile_source": "madrid-open-data:working-day traffic-count profile",
+  "congestion_profile_method": "citywide-working-day-intensity-band-multipliers",
+  "congestion_hour_means": {
+    "0": 276.386514,
+    "1": 191.853721,
+    "2": 138.054164,
+    "3": 112.049005,
+    "4": 118.591746,
+    "5": 229.512528,
+    "6": 521.00479,
+    "7": 876.859985,
+    "8": 989.421887,
+    "9": 949.760133,
+    "10": 927.585114,
+    "11": 930.617907,
+    "12": 971.187546,
+    "13": 1020.614223,
+    "14": 1028.176492,
+    "15": 1031.326087,
+    "16": 1035.25129,
+    "17": 1062.229919,
+    "18": 1069.795136,
+    "19": 1010.369934,
+    "20": 870.45689,
+    "21": 700.4042,
+    "22": 550.531688,
+    "23": 418.185704
+  },
+  "congestion_baseline_hour_mean": 709.592775,
+  "congestion_raw_band_ratios": {
+    "overnight": 0.250483,
+    "morning_peak": 1.175691,
+    "midday": 1.388004,
+    "evening_peak": 1.422817,
+    "night": 0.784075
+  },
+  "congestion_duration_sensitivity": 0.35,
+  "congestion_min_multiplier": 0.82,
+  "congestion_max_multiplier": 1.25
+}

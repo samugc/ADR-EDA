@@ -1,0 +1,22 @@
+{
+  "created_from": {
+    "paper_aligned": "docs/realbike_dmoo/paper_aligned_citibike_osrm_static_s10_2026_05_25",
+    "event_multicity": "docs/realbike_dmoo/event_replay_multicity_osrm_s10_h168_2026_05_25"
+  },
+  "outputs": [
+    "REALBIKE_FINAL_NARRATIVE_2026_05_25.md",
+    "figures/citibike_osrm_service_cost_frontier.svg",
+    "figures/event_replay_multicity_service_cost_frontier.svg",
+    "manifest.json",
+    "realbike_tfm_section_snippet.tex",
+    "tables/citibike_osrm_adr_pairwise.csv",
+    "tables/citibike_osrm_adr_pairwise.tex",
+    "tables/citibike_osrm_main_results.csv",
+    "tables/citibike_osrm_main_results.tex",
+    "tables/event_replay_adr_aggregation_gap.csv",
+    "tables/event_replay_multicity_results.csv",
+    "tables/event_replay_multicity_results.tex",
+    "tables/policy_table.csv",
+    "tables/policy_table.tex"
+  ]
+}

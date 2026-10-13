@@ -1,0 +1,5 @@
+dataset,gate,adr_service,adr_utility,adr_km,adr_reoptimizations,adr_reuse,utility_delta_vs_rolling,km_saved_vs_rolling,service_delta_vs_static,utility_delta_vs_static
+citibike,1/4 agresivo,1.0,4036.226,1478.526,167.4,0.6,5.572,440.832,0.014993,232.138
+citibike,2/8 reutilizador,0.999738,4024.145,1558.879,84.0,84.0,-6.509,360.479,0.014731,220.057
+divvy,1/4 agresivo,0.980368,1913.595,1164.116,168.0,0.0,52.927,920.749,0.102161,869.442
+divvy,2/8 reutilizador,0.976046,1861.282,1319.667,89.9,78.1,0.614,765.197,0.097839,817.129

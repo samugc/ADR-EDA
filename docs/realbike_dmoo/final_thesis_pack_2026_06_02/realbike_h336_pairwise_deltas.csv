@@ -1,0 +1,7 @@
+dataset,comparison,delta_utility,delta_service,delta_km_osrm,delta_reopt,utility_wins,service_nonworse,km_wins,reopt_wins,paired_seeds
+Divvy,ADR-EDA frente a reeq. horario,142.45,0.0012,-2051.14,-152.90,10,7,10,10,10
+Divvy,ADR-EDA frente a horizonte rodante,111.94,-0.0040,-2462.93,-152.90,10,0,10,10,10
+Divvy,ADR-EDA frente a EDA horaria,-31.20,-0.0019,156.82,-152.90,2,4,3,10,10
+CitiBike,ADR-EDA frente a reeq. horario,30.88,-0.0010,-782.29,-189.90,9,1,10,10,10
+CitiBike,ADR-EDA frente a horizonte rodante,18.08,-0.0015,-837.83,-189.90,8,0,10,10,10
+CitiBike,ADR-EDA frente a EDA horaria,-8.59,0.0000,120.59,-189.90,4,6,0,10,10
