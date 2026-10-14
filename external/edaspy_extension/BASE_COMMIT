@@ -1,2 +1,2 @@
-Repository: https://github.com/VicentePerezSoloviev/EDAspy.git
-Commit: 04e45cfb9f797cc735dd0f5b265ac03c496100d4
+The upstream source and exact compatible revision are defined by
+EDASPY_REPOSITORY and EDASPY_COMMIT in docker/Dockerfile.benchmark.

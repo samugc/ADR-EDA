@@ -18,11 +18,11 @@ minutes and needs network access. The default benchmark runs ADR-EDA on
 `df1_t10` with seed 0, horizon 60, population 40, eight variables and one
 generation per step. Options are available with `--help`.
 
-The Docker build clones [EDAspy](https://github.com/VicentePerezSoloviev/EDAspy)
-at commit `04e45cfb9f797cc735dd0f5b265ac03c496100d4`, checks and applies
-`external/edaspy_extension/adr_eda_edaspy.patch`, then installs it in the image.
-No additional EDAspy checkout or native macOS installation is needed.
-The public configuration is `src/adr_eda/profile.py:ADR_EDA_PROFILE`.
+Docker installs the compatible EDAspy revision and applies the ADR-EDA patch
+automatically. No separate checkout or native macOS installation is needed.
+Dependency versions and source revision are maintained in the
+[Docker build configuration](docker/Dockerfile.benchmark).
+The public configuration is [`ADR_EDA_PROFILE`](src/adr_eda/profile.py).
 
 ## Full protocol and resumption
 

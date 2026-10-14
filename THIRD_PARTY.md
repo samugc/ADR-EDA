@@ -5,7 +5,7 @@ is not a grant of unrestricted reuse or redistribution rights.
 
 | Material | Recorded provenance | Status for this release |
 | --- | --- | --- |
-| EDAspy extension | VicentePerezSoloviev/EDAspy, commit `04e45cfb9f797cc735dd0f5b265ac03c496100d4`, plus the supplied patch | Upstream package metadata identifies MIT; upstream notices and the patch's contribution rights must be considered separately |
+| EDAspy extension | [EDAspy upstream](https://github.com/VicentePerezSoloviev/EDAspy) plus the supplied patch; version specified in the Docker build | Upstream package metadata identifies MIT; upstream notices and the patch's contribution rights must be considered separately |
 | Dynamic comparators | `tests/edas/clean_dynamic_sota_comparison.py` describes reference implementations and author-code-audited Python ports | File-level permissions for ports are not established in this package |
 | SGEA | Runner attributes Jiang–Yang (2017) and an audited author-code Python port | Original author-code licensing/derivation needs review |
 | Tr-NSGA-II, PFPA, TDA-DMOEA | Runner attributes Jiang et al. (2018), Zhang et al. (2022), Cai et al. (2024) | Paper attribution does not itself establish code licensing |
