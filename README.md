@@ -58,27 +58,11 @@ probabilistic model. The public configuration is
 [`ADR_EDA_PROFILE`](src/adr_eda/profile.py); the characterized core is reconstructed
 from the [EDAspy extension](external/edaspy_extension/README.md).
 
-## Benchmark and results
+## Benchmark detail
 
-The evaluated protocol uses **14 problems × 15 seeds**, horizon **60**, population
-**40**, **8** decision variables and **1** generation per dynamic step: eight
-established dynamic problems and six DF-T10 problems.
+The protocol combines eight established dynamic problems and six DF-T10 problems. Across the 14 problems, ADR-EDA wins **6/14 on MIGD** and **7/14 on MHV** under the evaluated setup. The complete benchmark includes nine compared methods, uncertainty estimates and post-change tradeoffs.
 
-ADR-EDA achieved the best mean global MIGD and MHV among the compared methods
-under this protocol, while Tr-NSGA-II showed better immediate post-change IGD.
-Selected means from the [final benchmark table](docs/benchmark_results/final_thesis_pack_2026_06_28/benchmark/analysis/overall_table.csv):
-
-| Method | MIGD ↓ | MHV ↑ | Post-change IGD ↓ | Post-change HV ↑ | Runtime (s) ↓ |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| ADR-EDA | **0.3748** | **5.3607** | 0.2780 | 4.5904 | 204.3 |
-| SGEA | 0.6829 | 5.1786 | 0.9610 | 4.4672 | 7.6 |
-| Tr-NSGA-II | 0.6112 | 4.7203 | **0.2192** | **4.5953** | 28.6 |
-| DNSGA-II-B | 1.1113 | 4.9528 | 1.5801 | 4.3584 | 23.8 |
-
-ADR-EDA wins 6/14 problems on MIGD and 7/14 on MHV, with substantially higher
-computational cost. These are results under the evaluated protocol, not a
-claim of universal superiority. [Full results and statistical analysis](docs/RESULTS.md)
-include all nine compared methods, uncertainty and post-change tradeoffs.
+See the [final benchmark table](docs/benchmark_results/final_thesis_pack_2026_06_28/benchmark/analysis/overall_table.csv) and [full results and statistical analysis](docs/RESULTS.md) for the complete metrics, including post-change hypervolume and per-problem results.
 
 ## Shared-mobility case studies
 
