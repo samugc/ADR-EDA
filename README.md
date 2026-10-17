@@ -1,11 +1,25 @@
 # ADR-EDA
 
-Adaptive Dynamic Response Estimation of Distribution Algorithm is an adaptive
-control architecture for dynamic multiobjective optimization. It decides how
-much inherited optimizer state should be retained, corrected or replaced after
-environmental change.
+Adaptive Dynamic Response Estimation of Distribution Algorithm is a research implementation for **dynamic multiobjective optimization**. It controls how much optimizer state should be retained, corrected or replaced after an environmental change.
+
+Associated research: **ADR-EDA: A reliability-aware controller for dynamic multiobjective estimation of distribution algorithms**, accepted at **CAEPIA 2026 / Springer proceedings**.
 
 Dynamic multiobjective optimization · probabilistic models · adaptive response · shared mobility
+
+## Results at a glance
+
+The evaluated benchmark uses **14 problems × 15 seeds**, horizon **60**, population **40**, **8** decision variables and **1** generation per dynamic step.
+
+| Method | MIGD ↓ | MHV ↑ | Post-change IGD ↓ | Runtime (s) ↓ |
+| --- | ---: | ---: | ---: | ---: |
+| ADR-EDA | **0.3748** | **5.3607** | 0.2780 | 204.3 |
+| SGEA | 0.6829 | 5.1786 | 0.9610 | 7.6 |
+| Tr-NSGA-II | 0.6112 | 4.7203 | **0.2192** | 28.6 |
+| DNSGA-II-B | 1.1113 | 4.9528 | 1.5801 | 23.8 |
+
+ADR-EDA achieved the best mean global MIGD and MHV among the compared methods under this protocol, while Tr-NSGA-II showed better immediate post-change IGD. ADR-EDA also had substantially higher computational cost. These results describe this evaluated protocol, not universal superiority.
+
+[Full benchmark results and statistical analysis](docs/RESULTS.md)
 
 ## What it does
 
